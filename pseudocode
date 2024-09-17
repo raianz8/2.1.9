@@ -32,3 +32,11 @@ To make Karel do a finalCheck:
     If there is no paint, paint it black
     If there is paint, move
     If front is blocked, move to next layer
+
+Milestone 5: Make Karel make the stars
+To make Karel make stars:
+    Go to coordinate we want
+    Make the cyan star
+    Go to other coordinate we want
+    Make the white star
+    etc...
