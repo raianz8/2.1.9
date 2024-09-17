@@ -1,0 +1,34 @@
+Milestone 1: Make Karel paint the planet outline
+To build planet outline:
+    Move to correct x-axis
+    Move to correct y-axis
+    Repeat 4 times:
+        Paint one fourth of the planet outline
+    Move to correct location
+
+To paint one fourth of planet outline:
+    Paint one of the four flat sides
+    Paint one of the four curved edges
+
+Milestone 2: Make Karel paint the planet stripes
+To paint stripes:
+    Paint first stripe
+    Move to next layer
+    Paint next stripe
+    Move to next layer
+    etc...
+
+Milestone 3: Make Karel go home so she can do finalCheck
+To make Karel go to start:
+    If facing east, north, or south face west
+    While front is clear, move forward
+    If front is blocked, turn left
+    While front is clear, move forward
+    If front is blocked, turn left so you face east
+
+Milestone 4: Make Karel do a final check and paint everything black
+To make Karel do a finalCheck:
+    While front is clear move
+    If there is no paint, paint it black
+    If there is paint, move
+    If front is blocked, move to next layer
