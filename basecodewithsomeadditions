@@ -1,30 +1,130 @@
-1) Understand
-    1. I understand Top-Down Design.
+/*
+ * This program tells a graphical story in 10 frames.
+ */
 
-2) Break Down
-    1. Story starts with Apple and Onion in a fridge.
-    They escape when a man opens the fridge. He catches
-    them but Onion sacrifices himself and dies causing 
-    the man to cry and Apple escapes. We will have to
-    make sprites and import the backgrounds as well.
-    2. Import photo backgrounds for scenes 1-10. Draw
-    Apple and Onion for all scenes. Draw the man crying
-    and the knife for certain scenes. Then add the text.
-    3.Importing the photos should take maybe 15 minutes.
-    Drawing apple and orange in their various emotions
-    will take probably an entire day. Same thing with
-    the man, so we will split the workload. Adding the
-    text could take maybe a day as well. We can work on
-    this at home.
+/* 
+ * Draws the first scene on the canvas and outputs the first
+ * section of text for the story.
+ */
+function drawScene1(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 1");
+}
 
-3) Visualize
-    1. I'm not drawing this on paper we'll just wing it.
-    2. We will use lines, rectangles, circles, and
-    use photos as well. Maybe we can just make the
-    faces and import the apples themselves as photos?
+/* 
+ * Draws the second scene on the canvas and outputs the second
+ * section of text for the story.
+ */
+function drawScene2(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 2");
+}
 
-4) Checklist
-    1. Choose and import photos needed (30 minutes)
-    2. Create the facial expressions of Apple and Onion (120 minutes)
-    3. Create the man crying (45 minutes)
-    4. Add the text (45 minutes)
+/* 
+ * Draws the third scene on the canvas and outputs the third
+ * section of text for the story.
+ */
+function drawScene3(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 3");
+}
+
+/* 
+ * Draws the fourth scene on the canvas and outputs the fourth
+ * section of text for the story.
+ */
+function drawScene4(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 4");
+}
+
+function drawScene5(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 5");
+}
+
+function drawScene6(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 6");
+}
+
+function drawScene7(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 7");
+}
+
+function drawScene8(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 8");
+}
+
+function drawScene9(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 9");
+}
+
+function drawScene10(){
+    // IMPLEMENT THIS FUNCTION
+    println("This is scene 10");
+}
+/**********************************************************
+ * This is set up code that makes the story advance from
+ * scene to scene. Feel free to check out this code and
+ * learn how it works!
+ * But be careful! If you modify this code the story might
+ * not work anymore.
+ **********************************************************/
+
+var sceneCounter = 0;
+function start() {
+    let copter = new WebImage("https://cf-images.us-east-1.prod.boltdns.net/v1/static/1078702682/9f984c08-6b8f-4631-828d-eeee1225889c/593af1df-23b2-41cf-886a-ce5484a4451c/1280x720/match/image.jpg");
+    copter.setPosition(-200, 0);
+    add(copter);
+    var welcome = new Text("Freedom");
+    var credits = new Text("made by Ryan Zhumagaliyev, and Connor Elsasser". "30pt, Arial");
+    
+    welcome.setPosition(
+        getWidth() / 2 - welcome.getWidth() / 2,
+        getHeight() / 2
+    );
+    
+    credits.setPosition(
+        getWidth() / 2 - credits.getWidth() / 2,
+        getHeight() * 3/4
+    );
+    
+    add(welcome);
+    add(credits);
+    
+    // Call the drawNextScene function every time the mouse is clicked
+    mouseClickMethod(drawNextScene);
+}
+
+/*
+ * When this function is called the next scene is drawn.
+ */
+function drawNextScene(){
+    sceneCounter++;
+    
+    if(sceneCounter == 1) {
+        drawScene1();
+    } else if (sceneCounter == 2) {
+        drawScene2();
+    } else if (sceneCounter == 3) {
+        drawScene3();
+    } else if (sceneCounter == 4) {
+        drawScene4();
+    } else if (sceneCounter == 5) {
+        drawScene5();
+    } else if (sceneCounter == 6) {
+        drawScene6();
+    } else if (sceneCounter == 7) {
+        drawScene7();
+    } else if (sceneCounter == 8) {
+        drawScene8();
+    } else if (sceneCounter == 9) {
+        drawScene9();
+    } else if (sceneCounter == 10) {
+        drawScene10();
+    }
+}
