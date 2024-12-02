@@ -1,0 +1,5 @@
+function drawOnion(x, y) {
+    let copter = new WebImage("https://static.vecteezy.com/system/resources/previews/027/216/322/non_2x/onion-onion-transparent-background-ai-generated-free-png.png");
+    copter.setSize(300, 300); 
+    add(copter); 
+}
