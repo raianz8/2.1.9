@@ -1,0 +1,195 @@
+function drawScene1(){
+    // Apple in fridge worrying about being eaten
+    let copter = new WebImage("https://media.istockphoto.com/id/179043123/photo/empty-fridge.jpg?s=612x612&w=0&k=20&c=_EYGC8JDiAvOPwUYWil9tmjyRrLjI4mxxq9Arh8vnI0=");
+    copter.setPosition(0, 0);
+    copter.setSize(getWidth(), 612);
+    add(copter);
+    println("This is apple");
+    println("Apple is scared of dying and being eaten");
+    println("'I'm going to escape when the fridge door opens' said Apple");
+    drawApple(100, 100);
+    drawFace(75, 75);
+}
+
+function drawScene2(){
+    // Apple and Onion meet
+    let copter = new WebImage("https://cdn.pixabay.com/photo/2016/01/31/14/32/architecture-1171462_640.jpg");
+    copter.setPosition(-200, -500);
+    copter.setSize(1280, 1262);
+    add(copter);
+    println(" ");
+    println("A man opened the fridge and apple escaped onto the counter");
+    println("Apple saw another escaped fruit");
+    println("'Hey' said Apple, 'What's your name?'");
+    println("'I... am Onion' said Onion");
+    println("'It's good to see another fruit/vegetable, let's escape' said Apple to Onion");
+    println("'Ok' said Onion");
+    drawApple();
+    drawFace(90, 85);
+    drawOnion2();
+    drawFace(225, 105);
+}
+
+function drawScene3(){
+    // Onion is getting sliced up
+    let copter = new WebImage("https://cdn.pixabay.com/photo/2016/01/31/14/32/architecture-1171462_640.jpg");
+    copter.setPosition(-500, -450);
+    copter.setSize(1280, 1262);
+    add(copter);
+    println(" ");
+    println("Just as they were about to make a getaway... the man came at Onion with a knife!!");
+    println("'Onion!!' said Apple");
+    println("'oh god' said Onion, 'ow, ow, ow, ow, ow, ow' he continued to say");
+    println("'Apple, listen to me, you're gonna have to make a run for it...'");
+    println("'... Okay Onion, I'll survive just for you...' Apple promised");
+    println("Then.. Onion took his last breath.. Apple was devastated");
+    drawKnife();
+    drawOnion();
+    drawFace(100, 120);
+}
+
+function drawScene4(){
+    // The man is crying
+    println(" ");
+    println("The man, who was completely unaware that they were alive and wished to be free, sliced Onion");
+    println("However, the man choosing to cut Onion first was a mistake, as his eyes started to water and sting");
+    println("The man started crying, and Apple used this opportunity to run");
+    drawMan();
+    tear();
+}
+
+function drawScene5(){
+    // Apple is running away and sad
+    let copter = new WebImage("https://cdn.pixabay.com/photo/2016/01/31/14/32/architecture-1171462_640.jpg");
+    copter.setPosition(-200, -500);
+    copter.setSize(1280, 1262);
+    add(copter);
+    println(" ");
+    println("As Apple ran for it, he took a moment to remember Onion, who had unintentionally saved his life");
+    println("'Thank you... Onion...' he said, and then he ran away, never to be found again");
+    drawApple();
+    drawFace(60, 95);
+}
+
+function drawFinish(){
+    // End of story
+    println(" ");
+    println("And that's how the story ends, some earn their freedom and others do not...");
+}
+
+function drawApple(x, y) {
+    let copter = new WebImage("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/dcrjbvx-b5078bbf-03ff-4625-b214-35c3f9fefc4c.png/v1/fill/w_900,h_900/red_apple_on_a_transparent_background__by_prussiaart_dcrjbvx-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9kY3JqYnZ4LWI1MDc4YmJmLTAzZmYtNDYyNS1iMjE0LTM1YzNmOWZlZmM0Yy5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Y0-7z3OBNt3CbKeZrPiWJFD-4LhVF7I9iC2wADeZEAU");
+    copter.setSize(225, 225); 
+    add(copter);
+}
+
+function drawOnion() {
+    let copter = new WebImage("https://static.vecteezy.com/system/resources/previews/027/216/322/non_2x/onion-onion-transparent-background-ai-generated-free-png.png");
+    copter.setSize(300, 300); 
+    add(copter); 
+}
+
+function drawOnion2() {
+    let copter = new WebImage("https://static.vecteezy.com/system/resources/previews/027/216/322/non_2x/onion-onion-transparent-background-ai-generated-free-png.png");
+    copter.setPosition(140, 0);
+    copter.setSize(275, 275); 
+    add(copter); 
+}
+
+function drawKnife() {
+    let copter = new WebImage("https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjY4Ni0yMTItcC5wbmc.png");
+    copter.setPosition(0, -100);
+    copter.setSize(800 * 2/5, 533 * 2/5); 
+    add(copter); 
+}
+
+function drawMan() {
+    let copter = new WebImage("https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=");
+    copter.setPosition(-450, 0);
+    copter.setSize(1224, 816);
+    add(copter); 
+}
+
+function tear() {
+    let copter = new WebImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWDkiAifvhX-nG9lfNdOQciePHgORKZ7haXQ&s");
+    copter.setPosition(65, 250);
+    copter.setSize(920/10, 1214/10);
+    add(copter); 
+}
+
+function drawFace(x, y) {
+    let eye1 = new Polygon();
+    eye1.addPoint(x + 0, y + 7.5);
+    eye1.addPoint(x + 5, y + 0);
+    eye1.addPoint(x + 30, y + 0);
+    eye1.addPoint(x + 35, y + 7.5);
+    eye1.addPoint(x + 35, y + 57.5);
+    eye1.addPoint(x + 30, y + 62.5);
+    eye1.addPoint(x + 5, y + 62.5);
+    eye1.addPoint(x + 0, y + 57.5);
+    eye1.addPoint(x + 0, y + 45);
+    eye1.addPoint(x + 10, y + 30);
+    eye1.addPoint(x + 0, y + 15);
+    eye1.setColor(Color.black);
+    add(eye1);
+    let eye2 = new Polygon();
+    eye2.addPoint(x + 50, y + 7.5);
+    eye2.addPoint(x + 55, y + 0);
+    eye2.addPoint(x + 80, y + 0);
+    eye2.addPoint(x + 85, y + 7.5);
+    eye2.addPoint(x + 85, y + 57.5);
+    eye2.addPoint(x + 80, y + 62.5);
+    eye2.addPoint(x + 55, y + 62.5);
+    eye2.addPoint(x + 50, y + 57.5);
+    eye2.addPoint(x + 50, y + 45);
+    eye2.addPoint(x + 60, y + 30);
+    eye2.addPoint(x + 50, y + 15);
+    eye2.setColor(Color.black);
+    add(eye2);
+}
+
+var sceneCounter = 0;
+function start() {
+    let copter = new WebImage("https://cf-images.us-east-1.prod.boltdns.net/v1/static/1078702682/9f984c08-6b8f-4631-828d-eeee1225889c/593af1df-23b2-41cf-886a-ce5484a4451c/1280x720/match/image.jpg");
+    copter.setPosition(-200, 0);
+    add(copter);
+    var welcome = new Text("Freedom");
+    var credits = new Text("made by Ryan Zhumagaliyev, and Connor Elsasser", "Arial");
+    
+    welcome.setPosition(
+        getWidth() / 2 - welcome.getWidth() / 2,
+        getHeight() / 2
+    );
+    
+    credits.setPosition(
+        getWidth() / 2 - credits.getWidth() / 2,
+        getHeight() * 3/4
+    );
+    
+    add(welcome);
+    add(credits);
+    
+    // Call the drawNextScene function every time the mouse is clicked
+    mouseClickMethod(drawNextScene);
+}
+
+/*
+ * When this function is called the next scene is drawn.
+ */
+function drawNextScene(){
+    sceneCounter++;
+    
+    if(sceneCounter == 1) {
+        drawScene1();
+    } else if (sceneCounter == 2) {
+        drawScene2();
+    } else if (sceneCounter == 3) {
+        drawScene3();
+    } else if (sceneCounter == 4) {
+        drawScene4();
+    } else if (sceneCounter == 5) {
+        drawScene5();
+    } else if (sceneCounter == 6) {
+        drawFinish();
+    }
+}
