@@ -1,0 +1,5 @@
+1. The teacher or my friend. The teacher needs top grade it, and we have all the required things. My friend wants to be entertained,and our story is entertaining.
+2. It tells a story and this goes with the functionality of the program as that was what it was supposed to do and it achieves this task perfectly.
+3. It sequenced by drawingthe background first, then drawing the elements on screen in the right order, and the text could go wherever and still work. We repeatedly tested the program as well.
+4. There is no iteration statement other than the scene counter which just makes the scene counter go up by one every time you click the mouse, limiting at 5, but it is not a loop, just an if statement.
+5. drawScene1 is the first procedure in my program and if I changed the drawFace(75, 75); callback to drawFace(); it would be an error, as the drawFace function needs those x and y parameters to draw the face at the correct coordinates.
