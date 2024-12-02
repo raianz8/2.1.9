@@ -192,4 +192,98 @@ function drawNextScene(){
     } else if (sceneCounter == 6) {
         drawFinish();
     }
-}
+
+Scene 1.
+The first function is to draw the adpple.
+The web image is the background.
+we are placing the copter at the coordinates 0,0.
+We are setting the size to the width and 612.
+we then add the copter
+we then call the function of draw apple.
+After the apple is added, he says he is scared of dying and wants to escape.
+
+Scene 2.
+the new copter is the the new background.
+we set the position to -200, -500 and the size to 1280, and 1262.
+we then add the copter.
+The apple and onion then meet and frther confir their plan to escape.
+we then called the function of draw apple and draw onion.
+The 2 faces are set to 90, 85 and 225 and 105.
+
+Scene 3. 
+We draw a new web image of a new background.
+This new copter is set to -500, -450.
+The copter size is 1280, 1262.
+we then add the copter.
+As the apple and onion are escaping, the man comes back with a knife.
+As the onion was in much pain, he told apple to escape and go on without him.
+The apple agreed and with much greif, left without his friend onion.
+We then call the function of draw knife, draw onion, and draw face.
+the face is set at 100, 120.
+
+Scene 4.
+The man is unaware of the fact that the onion and apple were alive and wanted to escape.
+As the man started to cry because he was cuttin the onion.
+Seeing this, the apple then escaped.
+The draw man function was then called.
+the tearfunction was then called.
+
+Scene 5.
+the new web imgae is the new background.
+The copter position is -200, -500
+the size is 1280, 1262.
+We then add the copter.
+As the apple is escaping, he takes a moment to remember the onion who saved his life, after that, the apple was never seen again.
+We then call the function of draw apple.
+We then make the face.
+The face position is 60, 95.
+
+1. The function "draw finish"
+print "And that's how the story ends, some earn their freedom and others do not..."
+
+2. The function "draw apple"
+We got the webimage of an apple.
+We set the size to 225, 225.
+We then added the copter.
+
+3. the function "draw onion"
+We got the web image of an onion.
+We set the size to 300, 300
+We then added the copter.
+
+4. The function "draw onion 2"
+We got the web image of another onion
+we set the size to 275, 275.
+We the added the copter.
+
+5. The function "draw knife"
+We got a web image of a knife.
+we set the position to 0, -100
+we set the size to (800 * 2/5, 533 * 2/5)
+We then added the copter
+
+6. The function "draw man"
+We got the web image of a man.
+We set the position to -450, 0.
+we set the size to 1224, 816.
+
+7. The function "tear"
+We got the web image of a tear.
+we set the position to 65, 250
+we set the size to 920/10, 1214/10.
+We then added the copter.
+
+8. The function "draw face"
+This is a polygon so we need to make our own points.
+The points are for each eye.
+
+9. The start function 
+We have to get the web image of a fridge as the stting.
+the position is -200, 0
+We have our welcom and credit lines.
+the position of welcome is  getWidth() / 2 - welcome.getWidth() / 2,getHeight() / 2
+The position of credit is  getWidth() / 2 - credits.getWidth() / 2,
+        getHeight() * 3/4
+        
+10. The "draw next scene function"
+After one scene is concluded by a click, it goes to the next scene.
