@@ -1,0 +1,95 @@
+// constants
+    // image-related constants
+    var IMAGE_LINK = readLine("insert image address for requested image here please! ");
+    var FILTER_CHOICE = readLine("which filter do you want, darken or black and white? ");
+    
+    if (FILTER_CHOICE != "darken" || "black and white") {
+        println("Sorry, that's not an option :( could you try again?")
+    }
+    
+    var IMAGE_HEIGHT = getHeight();
+    var IMAGE_WIDTH = getWidth();
+    var IMAGE_X_COORDINATE = 0;
+    var IMAGE_Y_COORDINATE = 0;
+    // pixel-related constants
+    var RED = 0;
+    var GREEN = 1;
+    var BLUE = 2;
+
+    // image-loading time in milliseconds
+    var IMAGE_LOADING_TIME = 200;
+
+function start () {
+    var image = new WebImage(IMAGE_LINK);
+    image.setSize(IMAGE_WIDTH, IMAGE_HEIGHT);
+    image.setPosition(IMAGE_X_COORDINATE, IMAGE_Y_COORDINATE)
+
+    add(image);
+
+    setTimeout(function(){
+        monochromeFilter(image);
+
+    for (var x = 0; x < image.getWidth(); x++) {
+        for (var y = 0; y < image.getHeight(); y++) {
+            var pixel = image.getPixel(x, y);
+            if (FILTER_CHOICE == "darken") {
+                darkenFilter(pixel);
+            } else if (FILTER_CHOICE == "black and white") {
+                monochromeFilter(pixel);
+            }
+
+            image.setRed(x, y, pixel[RED]);
+            image.setGreen(x, y, pixel[GREEN]);
+            image.setBlue(x, y, pixel[BLUE]);
+        }
+    }
+    }, IMAGE_LOADING_TIME)
+}
+
+function monochromeFilter(pixel) {
+    var red = pixel[RED];
+    var green = pixel[GREEN];
+    var blue = pixel[BLUE];
+
+    if (red >= 128 && green >= 128 && blue >= 128) {
+        var newRed = 200;
+        var newGreen = 200;
+        var newBlue = 200;
+    } else {
+        var newRed = 0;
+        var newGreen = 0;
+        var newBlue = 0;
+    }
+
+    pixel[RED] = newRed;
+    pixel[GREEN] = newGreen;
+    pixel[BLUE] = newBlue;
+
+    return pixel;
+}
+
+function darkenFilter(pixel) {
+    var red = pixel[RED];
+    var green = pixel[GREEN];
+    var blue = pixel[BLUE];
+
+    var newRed = red - 50;;
+    var newGreen = green - 50;
+    var newBlue = blue - 50;
+
+    if (newRed > 255) {
+        newRed = 255;
+    }
+    if (newGreen > 255) {
+        newGreen = 255;
+    }
+    if (newBlue > 255) {
+        newBlue = 255;
+    }
+
+    pixel[RED] = newRed;
+    pixel[GREEN] = newGreen;
+    pixel[BLUE] = newBlue;
+
+    return pixel;
+}
