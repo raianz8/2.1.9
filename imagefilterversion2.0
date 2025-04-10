@@ -1,0 +1,101 @@
+// constants, made by me
+    // image-related constants
+    var IMAGE_LINK = readLine("insert image address for requested image here please! ");
+    var FILTER_CHOICE = readLine("which filter do you want, darken or black and white? ");
+    
+    var IMAGE_HEIGHT = getHeight();
+    var IMAGE_WIDTH = getWidth();
+    var IMAGE_X_COORDINATE = 0;
+    var IMAGE_Y_COORDINATE = 0;
+    
+    // pixel-related constants
+    var RED = 0;
+    var GREEN = 1;
+    var BLUE = 2;
+
+    // image-loading time in milliseconds
+    var IMAGE_LOADING_TIME = 2000;
+
+// start function, sets the image up and runs the filter for every pixel, done by partner
+function start () {
+    var image = new WebImage(IMAGE_LINK);
+    image.setSize(IMAGE_WIDTH, IMAGE_HEIGHT);
+    image.setPosition(IMAGE_X_COORDINATE, IMAGE_Y_COORDINATE)
+
+    add(image);
+
+    setTimeout(function(){
+
+    for (var x = 0; x < image.getWidth(); x++) {
+        for (var y = 0; y < image.getHeight(); y++) {
+            var pixel = image.getPixel(x, y);
+            if (FILTER_CHOICE == "darken") {
+                darkenFilter(pixel);
+            } else if (FILTER_CHOICE == "black and white") {
+                blackAndWhiteFilter(pixel);
+            } else {
+                println("sorry, that doesn't seem to be an available filter, try again?");
+                var breaking = true;
+                break;
+            }
+
+            image.setRed(x, y, pixel[RED]);
+            image.setGreen(x, y, pixel[GREEN]);
+            image.setBlue(x, y, pixel[BLUE]);
+        }
+        if (breaking == true) {
+            break;
+        }
+    }
+    }, IMAGE_LOADING_TIME)
+}
+
+// makes dark pixels black, and makes light pixels an extreme white, done by partner
+function blackAndWhiteFilter(pixel) {
+    var red = pixel[RED];
+    var green = pixel[GREEN];
+    var blue = pixel[BLUE];
+
+    if (red >= 128 && green >= 128 && blue >= 128) {
+        var newRed = 200;
+        var newGreen = 200;
+        var newBlue = 200;
+    } else {
+        var newRed = 0;
+        var newGreen = 0;
+        var newBlue = 0;
+    }
+
+    pixel[RED] = newRed;
+    pixel[GREEN] = newGreen;
+    pixel[BLUE] = newBlue;
+
+    return pixel;
+}
+
+// makes all pixels darker by 50, done by me
+function darkenFilter(pixel) {
+    var red = pixel[RED];
+    var green = pixel[GREEN];
+    var blue = pixel[BLUE];
+
+    var newRed = red - 50;;
+    var newGreen = green - 50;
+    var newBlue = blue - 50;
+
+    if (newRed > 255) {
+        newRed = 255;
+    }
+    if (newGreen > 255) {
+        newGreen = 255;
+    }
+    if (newBlue > 255) {
+        newBlue = 255;
+    }
+
+    pixel[RED] = newRed;
+    pixel[GREEN] = newGreen;
+    pixel[BLUE] = newBlue;
+
+    return pixel;
+}
